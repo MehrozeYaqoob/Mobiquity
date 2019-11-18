@@ -10,15 +10,20 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txt_product_category"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:layout_height="35dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         tool:text="Menu Items"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:background="@color/ligth_grey"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_vertical"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycle_view_product_listing"
@@ -33,7 +38,6 @@
         android:paddingLeft="16dp"
         android:paddingEnd="0dp"
         android:paddingRight="0dp"
-        android:layout_marginBottom="25dp"
-        />
+        android:layout_marginBottom="25dp" />
 
 </LinearLayout>

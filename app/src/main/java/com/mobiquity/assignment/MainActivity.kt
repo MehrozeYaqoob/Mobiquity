@@ -3,6 +3,7 @@ package com.mobiquity.assignment
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -42,6 +43,7 @@ class MainActivity : BaseActivityMVVM<ActivityMainBinding, MenuListViewModel>(),
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        setSupportActionBar(toolbar)
         initRecyclerView()
         observeMenuList()
 
