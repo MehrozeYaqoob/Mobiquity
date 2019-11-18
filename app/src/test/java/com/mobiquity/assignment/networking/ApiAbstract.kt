@@ -1,21 +1,24 @@
 package com.mobiquity.assignment.networking
 
+import org.junit.After
+import org.junit.Before
+import org.junit.runner.RunWith
+import org.junit.runners.JUnit4
+
+import java.io.IOException
+import java.io.InputStream
+import java.nio.charset.StandardCharsets
+import java.util.Collections
+
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
 import okio.BufferedSource
+import okio.Source
 import okio.buffer
 import okio.source
-import org.junit.After
-import org.junit.Before
-import org.junit.Test
-import org.junit.runner.RunWith
-import org.junit.runners.JUnit4
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import java.io.IOException
-import java.nio.charset.StandardCharsets
-import java.util.*
 
 
 @RunWith(JUnit4::class)
@@ -72,9 +75,5 @@ open class ApiAbstract<T> {
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build()
             .create(clazz)
-    }
-
-    @Test
-    fun assertRequestPath() {
     }
 }

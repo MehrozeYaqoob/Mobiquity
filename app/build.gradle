@@ -62,10 +62,10 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
 
     // OkHttp
-    implementation 'com.squareup.okhttp3:okhttp:4.2.1'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.0.0'
     implementation "com.squareup.retrofit2:converter-gson:2.6.2"
-    testImplementation 'com.squareup.okhttp3:mockwebserver:3.9.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.0.0'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.0.0'
 
     // Retrofit
     implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'

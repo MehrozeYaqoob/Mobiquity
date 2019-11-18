@@ -52,7 +52,7 @@ class ProductItemViewHolderTest {
     @Test
     fun bind() {
         product = Product()
-        productItemViewHolder = ProductItemViewHolder(Mockito.mock(View::class.java))
+        productItemViewHolder = ProductItemViewHolder(Mockito.mock(View::class.java), any())
         productItemViewHolder.bind(product)
     }
 
