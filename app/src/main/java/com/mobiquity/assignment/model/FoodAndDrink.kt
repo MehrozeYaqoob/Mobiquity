@@ -2,8 +2,7 @@ package com.mobiquity.assignment.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-
-import java.util.ArrayList
+import java.util.*
 
 /**
  * Created by Mehroze on 11/15/2019.

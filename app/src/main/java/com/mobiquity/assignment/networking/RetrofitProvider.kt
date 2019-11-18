@@ -1,4 +1,4 @@
-package com.mindvalley.downloader.downloaderCore.networking
+package com.mobiquity.assignment.networking
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import com.mobiquity.assignment.BuildConfig

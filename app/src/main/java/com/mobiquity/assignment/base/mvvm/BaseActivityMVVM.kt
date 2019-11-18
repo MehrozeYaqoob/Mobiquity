@@ -1,8 +1,8 @@
 package com.mobiquity.assignment.base.mvvm
 
+import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import android.os.Bundle
 import com.mobiquity.assignment.base.BaseActivity
 
 abstract class BaseActivityMVVM<T : ViewDataBinding, V : BaseViewModel> : BaseActivity() {

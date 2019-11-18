@@ -6,9 +6,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.mobiquity.assignment.BR
 import com.mobiquity.assignment.R
 import com.mobiquity.assignment.base.mvvm.BaseActivityMVVM
-import com.mobiquity.assignment.databinding.ActivityMainBinding
 import com.mobiquity.assignment.databinding.ProductDetailBinding
-import com.mobiquity.assignment.model.Product
 import com.mobiquity.assignment.viewmodel.MenuListViewModel
 
 /**

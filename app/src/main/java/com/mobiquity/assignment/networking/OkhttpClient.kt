@@ -1,4 +1,4 @@
-package com.mindvalley.downloader.downloaderCore.networking
+package com.mobiquity.assignment.networking
 
 import com.mobiquity.assignment.BuildConfig
 import okhttp3.OkHttpClient
