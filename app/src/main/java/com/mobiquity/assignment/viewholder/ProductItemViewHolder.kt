@@ -9,7 +9,7 @@ import com.mobiquity.assignment.model.Product
 
 class ProductItemViewHolder(private val view: View, val listener: OnItemClicked) : RecyclerView.ViewHolder(view), View.OnClickListener {
 
-    private lateinit var itemProductBinding: ItemProductBinding
+    private var itemProductBinding: ItemProductBinding?= null
     private lateinit var product: Product
 
     constructor(itemProductBinding: ItemProductBinding, listener: OnItemClicked) : this(itemProductBinding.root, listener) {
@@ -18,8 +18,8 @@ class ProductItemViewHolder(private val view: View, val listener: OnItemClicked)
 
     fun bind(item: Product) {
         product = item
-        itemProductBinding.context = itemView.context
-        itemProductBinding.setVariable(BR.product, item)
+        itemProductBinding?.context = itemView.context
+        itemProductBinding?.setVariable(BR.product, item)
         itemView.setOnClickListener(this)
     }
 

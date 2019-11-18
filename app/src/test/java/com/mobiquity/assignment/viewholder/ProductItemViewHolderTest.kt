@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import com.mobiquity.assignment.contracts.OnItemClicked
 import com.mobiquity.assignment.databinding.ItemProductBinding
 import com.mobiquity.assignment.model.Product
 import org.junit.Before
@@ -14,6 +15,7 @@ import org.junit.runner.RunWith
 import org.mockito.Matchers.*
 import org.mockito.Mock
 import org.mockito.Mockito
+import org.mockito.runners.MockitoJUnitRunner
 import org.powermock.api.mockito.PowerMockito
 import org.powermock.core.classloader.annotations.PrepareForTest
 import org.powermock.modules.junit4.PowerMockRunner
@@ -22,39 +24,26 @@ import org.powermock.modules.junit4.PowerMockRunner
 /**
  * Created by Mehroze on 11/16/2019.
  */
-@RunWith(PowerMockRunner::class)
-@PrepareForTest( DataBindingUtil::class, ViewDataBinding::class, LayoutInflater::class)
+@RunWith(MockitoJUnitRunner::class)
 class ProductItemViewHolderTest {
 
-    @Mock
-    private lateinit var itemProductBinding: ItemProductBinding
     private lateinit var product: Product
     lateinit var productItemViewHolder: ProductItemViewHolder
+
     @Mock
-    lateinit var context: Context
-    @Mock
-    lateinit var inflater: LayoutInflater
+    lateinit var itemClicked: OnItemClicked
 
     @Before
     fun setUp() {
-        context = Mockito.mock(Context::class.java)
-        inflater = Mockito.mock(LayoutInflater::class.java)
-
-        PowerMockito.mockStatic(DataBindingUtil::class.java)
-        PowerMockito.mockStatic(ViewDataBinding::class.java)
-        PowerMockito.mockStatic(LayoutInflater::class.java)
-        PowerMockito.`when`<LayoutInflater>(LayoutInflater::class.java, "from", context).thenReturn(inflater)
-        PowerMockito.`when`<ItemProductBinding>(DataBindingUtil::class.java, "inflate", eq(inflater), anyInt(), any(ViewGroup::class.java), anyBoolean()).
-            thenReturn(itemProductBinding)
+        itemClicked = Mockito.mock(OnItemClicked::class.java)
 
     }
 
     @Test
     fun bind() {
         product = Product()
-        productItemViewHolder = ProductItemViewHolder(Mockito.mock(View::class.java), any())
+        productItemViewHolder = ProductItemViewHolder(Mockito.mock(View::class.java), itemClicked)
         productItemViewHolder.bind(product)
     }
-
 
 }
